@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    My Blog
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}">
+{% endblock %}
+
+{% block content %}
+    <header id="main-navigation">
+        <h1><a href="">Rithwik's Blog</a></h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+    
+    <section id="welcome">
+        <header>
+            <img src="{% static "blog/images/rithwik.jpeg" %}" alt="Rithwik - Blog Author">
+            <h2>RITHWIK'S BLOG</h2>
+        </header>
+        <p>Hi, I am Rithwik - Engineering undergrad who loves blogging!</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="{% static "blog/images/mountains.jpg" %}" alt="Hiking"/>
+                        <div class="post__content">
+                            <h3>Mountain Hiking</h3>
+                            <p>This is just some preview text! Lorem Ipsum and whatever else they would normally put here</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        <ul>
+    </section>
+
+    <section id="about">
+        <h2>What I do</h2>
+        <p>I am an engineering undergrad majoring in Electronics and Instrumentation, I enjoy writing code and coming up with solutions to real-world problems!</p>
+    </section>
+{% endblock %}
